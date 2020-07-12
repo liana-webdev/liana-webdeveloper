@@ -14,14 +14,14 @@ body {
     rgba(0, 0, 0, 0.274),
     rgba(0, 0, 0, 0.534)
   );
-
+box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.35);
+}
+.nav-blur {
   backdrop-filter: blur(10px);
   -o-backdrop-filter: blur(10px);
   -ms-backdrop-filter: blur(10px);
   -moz-backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.35);
 }
 .row {
   margin: 0 !important;
