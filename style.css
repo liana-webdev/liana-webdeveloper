@@ -15,8 +15,6 @@ body {
     rgba(0, 0, 0, 0.534)
   );
 
-  -ms-background-blend-mode: saturation;
-  backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   -o-backdrop-filter: blur(10px);
   -ms-backdrop-filter: blur(10px);
