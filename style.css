@@ -255,10 +255,18 @@ button:active {
   box-shadow: 10px 10px 25px #fff, -10px -10px 25px #d3d3d3,
     inset 10px 10px 25px #d3d3d3, inset -10px -10px 25px #fff;
 }
+.contact-circle:focus {
+  box-shadow: 10px 10px 25px #fff, -10px -10px 25px #d3d3d3,
+    inset 10px 10px 25px #d3d3d3, inset -10px -10px 25px #fff;
+}
 
 .contact-circle:active img {
   transform: scale(0.87, 0.87);
 }
+.contact-circle:focus img {
+  transform: scale(0.87, 0.87);
+}
+
 
 .contact-circle img {
   height: 140px;
