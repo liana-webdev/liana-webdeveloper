@@ -6,7 +6,6 @@ body,
 ::before {
   overflow-x: hidden;
 }
-
 body {
   font-family: 'Montserrat', serif !important;
   margin: 0 !important;
@@ -182,8 +181,8 @@ button:focus {
 }
 
 .port-img {
-  height: 130px;
-  display: inline;
+  height: 130px !important;
+  display: inline-block;
 }
 .port-title {
   display: inline;
@@ -211,9 +210,10 @@ button:focus {
 
 .portfolio {
 }
-
+img {
+}
 .projects-cont {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .project {
@@ -221,17 +221,34 @@ button:focus {
 }
 
 .proj-img {
+  background: linear-gradient(
+    270deg,
+    #ffffff99,
+    #e7e7e780,
+    #ffffff99,
+    #e7e7e780,
+    #ffffff99
+  );
+
+  background-size: 200% 200%;
+  animation: gradientTEXT 3s linear infinite;
   width: 90%;
-  border: 15px transparent solid;
+  height: 200px;
+  border: 0px transparent solid; /* add border 15px when images are added */
   border-radius: 40px;
   box-shadow: 10px 10px 25px #d3d3d3, -10px -10px 25px #ffffff;
-  transition: box-shadow 0.2s cubic-bezier(0.35, 0.11, 0.15, 1.04);
+  transition: box-shadow 0.2s cubic-bezier(0.35, 0.11, 0.15, 1.04); /* add border transition when images are there */
 }
 .proj-img:hover {
   max-width: 500px;
-  border: 15px transparent solid;
+  border: 0px transparent solid;
   border-radius: 40px;
   box-shadow: 10px 10px 15px #d3d3d3, -10px -10px 15px #ffffff;
+}
+.proj-img:active {
+  /* border: none; */
+  box-shadow: 10px 10px 25px #fff, -10px -10px 25px #d3d3d3,
+    inset 10px 10px 25px #d3d3d3, inset -10px -10px 25px #fff;
 }
 
 .proj-desc {
