@@ -6,12 +6,25 @@ body,
 ::before {
   box-sizing: unset !important;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   font-family: 'Montserrat', serif !important;
   margin: 0 !important;
-
   background: #ededed !important;
+}
+
+a {
+  color: white !important;
+}
+a:hover {
+  color: white;
+  text-decoration: unset !important;
+}
+
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
 }
 .navigation {
   position: fixed;
@@ -21,16 +34,20 @@ body {
     rgba(0, 0, 0, 0.274),
     rgba(0, 0, 0, 0.534)
   );
-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.35);
 }
+
 .nav-blur {
-    position: fixed;
+  z-index: 1; /* remove if glitches with nav appear */
+  position: fixed;
   backdrop-filter: blur(10px);
   -o-backdrop-filter: blur(10px);
   -ms-backdrop-filter: blur(10px);
   -moz-backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  width: 100%;
 }
+
 .row {
   margin: 0 !important;
 }
@@ -47,6 +64,11 @@ box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.35);
   text-shadow: -5px -5px 10px #ffffff, 5px 5px 10px #868686;
   color: white;
 }
+
+h3 {
+  text-shadow: -5px -5px 5px #ffffff, -5px -5px 5px #ffffff, 2px 2px 5px #868686;
+}
+
 ul {
   margin: 0;
 }
@@ -101,7 +123,8 @@ button:hover {
   border-radius: 50px;
   cursor: pointer;
 }
-button:active, button:focus {
+button:active,
+button:focus {
   color: transparent;
   box-shadow: 10px 10px 25px #fff, -10px -10px 25px #d3d3d3,
     inset 10px 10px 25px #d3d3d3, inset -10px -10px 25px #fff;
@@ -114,6 +137,18 @@ button:active, button:focus {
   border-radius: 50px;
 }
 
+.btn-active {
+  color: transparent;
+  box-shadow: 10px 10px 25px #fff, -10px -10px 25px #d3d3d3,
+    inset 10px 10px 25px #d3d3d3, inset -10px -10px 25px #fff;
+
+  padding: 1.7em 1.4em;
+  font-weight: bold;
+  font-size: 15px;
+  color: black;
+  border: 0 solid transparent;
+  border-radius: 50px;
+}
 
 .void-1 {
   height: 200px;
@@ -130,14 +165,21 @@ button:active, button:focus {
   }
 }
 
-.nav-list {
+.nav-list li {
+  transition: transform 0.2s cubic-bezier(0.35, 0.11, 0.15, 1.04);
 }
 
 .nav-item {
-  display: inline;
-  margin: 0 15px;
+  display: inline-block;
+  margin: 0 25px;
   font-size: 17px;
-  color: rgba(255, 255, 255, 0.534);
+  color: rgba(255, 255, 255, 0.934);
+}
+.nav-list li:hover {
+  transform: scale(1.3, 1.3);
+}
+.nav-list li:active {
+  transform: scale(0.9, 0.9);
 }
 
 .port-img {
@@ -258,6 +300,7 @@ button:active, button:focus {
 .contact-circle:hover {
   box-shadow: 10px 10px 15px #d3d3d3, -10px -10px 15px #ffffff;
 }
+
 .contact-circle:active {
   box-shadow: 10px 10px 25px #fff, -10px -10px 25px #d3d3d3,
     inset 10px 10px 25px #d3d3d3, inset -10px -10px 25px #fff;
@@ -274,7 +317,6 @@ button:active, button:focus {
   transform: scale(0.87, 0.87);
 }
 
-
 .contact-circle img {
   height: 140px;
   width: 140px;
@@ -290,4 +332,18 @@ button:active, button:focus {
 .contact-row {
   margin: 60px 0 60px 0px !important;
   height: 40%;
+}
+
+.responsive-menu {
+  background: linear-gradient(90deg, rgba(148, 148, 148, 0), white);
+  box-shadow: inset 10px 10px 25px #ffffff,
+    inset -10px -10px 25px rgb(180, 180, 180);
+  opacity: 0;
+  height: 0px;
+  transition: height 0.2s cubic-bezier(0.35, 0.11, 0.15, 1.04),
+    opacity 0.2s cubic-bezier(0.35, 0.11, 0.15, 1.04);
+}
+.responsive-menu-show {
+  opacity: 1;
+  height: 200px;
 }
