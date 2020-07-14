@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;700&display=swap');
 
+html,
+body,
+::after,
+::before {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Montserrat', serif !important;
   margin: 0 !important;
