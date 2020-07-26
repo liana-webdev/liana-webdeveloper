@@ -35,7 +35,7 @@ a:hover {
 }
 
 .nav-blur {
-  z-index: 1; /* remove if glitches with nav appear */
+  z-index: 2; /* remove if glitches with nav appear */
   position: fixed;
   backdrop-filter: blur(10px);
   -o-backdrop-filter: blur(10px);
