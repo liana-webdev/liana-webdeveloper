@@ -492,6 +492,7 @@ header {
 
 #about {
   height: 100vh;
+  background-color: #fff !important;
   display: grid;
   place-content: center;
   justify-content: space-evenly;
